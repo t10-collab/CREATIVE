@@ -1,1 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4/4박자 리듬 창작 도구</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <div class="container">
+    <h1>🎵 4/4박자 리듬 창작 도구</h1>
+
+    <div class="tempo-box">
+      <label>템포 (BPM)</label>
+      <div class="tempo-control">
+        <button id="minusTempo">-</button>
+        <span id="tempoValue">88</span>
+        <button id="plusTempo">+</button>
+      </div>
+    </div>
+
+    <h2>리듬 추가</h2>
+
+    <div class="note-buttons">
+      <button class="note-btn" data-type="quarter">
+        ♩<br>4분음표
+      </button>
+
+      <button class="note-btn" data-type="eighthSingle">
+        ♪<br>8분음표 1개
+      </button>
+
+      <button class="note-btn" data-type="eighthPair">
+        ♫<br>8분음표 2개
+      </button>
+
+      <button class="note-btn" data-type="sixteenthPair">
+        𝅘𝅥𝅯𝅘𝅥𝅯<br>16분음표 2개
+      </button>
+    </div>
+
+    <h2>만든 리듬</h2>
+
+    <div id="rhythmArea"></div>
+
+    <div class="controls">
+      <button id="playBtn">▶ 재생</button>
+      <button id="clearBtn">🗑 전체 삭제</button>
+    </div>
+
+    <div class="info">
+      현재 박자 합: <span id="beatCount">0</span> / 4
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
